@@ -10,6 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@naturacosmeticos/natds-react": "^2.32.3",
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/native-stack": "^6.7.0",
     "@rneui/base": "^4.0.0-rc.6",

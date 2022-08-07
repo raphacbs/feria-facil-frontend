@@ -6,20 +6,15 @@ import { createNavigationContainerRef } from "@react-navigation/native";
 import ListShoppingScreen from "./screens/ListShoppingScreen";
 import ShoppingCartScreen from "./screens/ShoppingCartScreen";
 import HelloWorldScreen from "./screens/HelloWorldScreen";
-import { ThemeProvider, createTheme, Button, Icon } from "@rneui/themed";
+import { Button, Icon } from "@rneui/themed";
+import { ThemeProvider, buildTheme } from "@naturacosmeticos/natds-react";
 import CreateShoppingListScreen from "./screens/CreateShoppingListScreen";
 
 const Stack = createNativeStackNavigator();
 const navigationRef = createNavigationContainerRef();
 
 function App() {
-  const theme = createTheme({
-    components: {
-      Button: {
-        raised: true,
-      },
-    },
-  });
+  const theme = buildTheme("natura", "light");
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
