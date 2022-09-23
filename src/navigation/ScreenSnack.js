@@ -1,8 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ShoppingListScreen from "../screens/ShoppingListScreen";
-import ShoppingCartScreen from "../screens/ShoppingCartScreen";
-import CreateShoppingListScreen from "../screens/CreateShoppingListScreen";
+import ShoppingCartScreen from "../features/shoppingCart";
+import CreateShoppingListScreen from "../features/shoppingList/CreateShoppingListScreen";
 import BarCodeScanScreen from "../screens/BarCodeScanScreen";
 import ProductScreen from "../screens/ProductScreen";
 import SearchProduct from "../screens/SearchProductScreen";

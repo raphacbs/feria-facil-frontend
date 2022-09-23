@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import { StatusBar } from "expo-status-bar";
-
+import { Provider } from "react-redux";
 import * as SplashScreen from "expo-splash-screen";
 
 import ScreenSnack from "./src/navigation/ScreenSnack";
+import { store } from "./src/store";
 
 function App() {
   // SplashScreen.preventAutoHideAsync()
@@ -48,12 +48,14 @@ function App() {
   });
 
   return (
-    <NativeBaseProvider theme={theme}>
-      <NavigationContainer>
-        <ScreenSnack />
-      </NavigationContainer>
-      <StatusBar style="light" />
-    </NativeBaseProvider>
+    <Provider store={store}>
+      <NativeBaseProvider theme={theme}>
+        <NavigationContainer>
+          <ScreenSnack />
+        </NavigationContainer>
+        <StatusBar style="light" />
+      </NativeBaseProvider>
+    </Provider>
   );
 }
 

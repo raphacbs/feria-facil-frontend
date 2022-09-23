@@ -1,6 +1,6 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import ShoppingListScreen from "../screens/ShoppingListScreen";
+import ShoppingList from "../features/shoppingList";
 import { IconButton } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import CustomSidebarMenu from "../components/CustomSidebarMenu";
@@ -14,7 +14,7 @@ export default DrawerNavigator = () => {
     >
       <Drawer.Screen
         name="ShoppingList"
-        component={ShoppingListScreen}
+        component={ShoppingList}
         initialParams={{ isArchived: false }}
         options={({ navigation }) => ({
           title: "Minhas Listas",
